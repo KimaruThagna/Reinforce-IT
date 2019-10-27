@@ -38,7 +38,6 @@ class DQNAgent:
             return random.randrange(self.action_size)
 
         act_values = self.model.predict(state)
-        print(f'act values {act_values}')# observe model output
         return np.argmax(act_values[0])  # returns best action
 
     def replay(self, batch_size): # train on memory values
